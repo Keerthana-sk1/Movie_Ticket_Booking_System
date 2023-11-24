@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Login</h2>
+    <label for="password">Enter Password:</label>
+    <input type="password" id="password">
+    <button onclick="checkPassword()">Submit</button>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            // You can customize the passwords and corresponding pages here
+            var adminPassword = "admin123";
+            var userPassword = "user123";
+
+            if (password === adminPassword) {
+                window.location.href = "admin-page.html";
+            } else if (password === userPassword) {
+                window.location.href = "user-page.html";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
+ 
